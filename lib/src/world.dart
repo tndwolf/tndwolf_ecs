@@ -109,12 +109,12 @@ abstract class World {
 
   /// Returns all the components of a specified [Type] added to the world.
   List<GameComponent> getComponents(Type componentType) {
-    return _components.where((c) => c.runtimeType == componentType);
+    return _components.where((c) => c.runtimeType == componentType).toList();
   }
 
   /// Return all components owned by an entity.
   List<GameComponent> getEntity(int entity) {
-    return _components.where((c) => c.entity == entity);
+    return _components.where((c) => c.entity == entity).toList();
   }
 
   /// Return all components owned by an entity.
